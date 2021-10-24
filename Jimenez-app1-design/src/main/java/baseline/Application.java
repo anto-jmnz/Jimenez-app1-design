@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Application Assignment 1 Solution
+ *  Copyright 2021 Antonia Jimenez
+ */
+
 package baseline;
 
 
@@ -6,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.util.Objects;
 
 
@@ -17,8 +23,8 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ToDoApp.fxml")));
-
+        URL url = getClass().getClassLoader().getResource("ToDoApp.fxml");
+        Parent root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
 
         stage.setTitle("To Do App");

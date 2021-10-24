@@ -5,8 +5,10 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -14,38 +16,51 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.Application">
+<AnchorPane prefHeight="400.0" prefWidth="648.0"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="baseline.Application">
    <children>
       <Accordion layoutX="47.0" layoutY="65.0" />
-      <ButtonBar layoutY="14.0" prefHeight="50.0" prefWidth="399.0">
+      <ButtonBar layoutX="101.0" layoutY="12.0" prefHeight="50.0" prefWidth="399.0">
         <buttons>
           <Button mnemonicParsing="false" text="Remove" />
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="New" />
             <Button mnemonicParsing="false" text="Edit Title" />
-            <Button mnemonicParsing="false" prefHeight="25.0" text="Save List" />
         </buttons>
       </ButtonBar>
-      <TextField layoutX="20.0" layoutY="64.0" prefHeight="25.0" prefWidth="379.0" promptText="List Title" />
-      <ChoiceBox accessibleText="Display" layoutX="220.0" layoutY="95.0" prefHeight="25.0" prefWidth="180.0" />
-      <Label layoutX="233.0" layoutY="140.0" prefHeight="17.0" prefWidth="67.0" text="Date">
+      <TextField layoutX="16.0" layoutY="65.0" prefHeight="25.0" prefWidth="573.0" promptText="List Title" />
+      <ChoiceBox accessibleText="Display" layoutX="408.0" layoutY="99.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="363.0" layoutY="140.0" prefHeight="17.0" prefWidth="75.0" text="Complete">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="324.0" layoutY="140.0" prefHeight="17.0" prefWidth="75.0" text="Complete">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <CheckBox layoutX="316.0" layoutY="174.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="92.0" text="Completed" />
-      <DatePicker layoutX="226.0" layoutY="172.0" prefHeight="17.0" prefWidth="67.0" />
-      <TableView layoutX="20.0" layoutY="140.0" prefHeight="259.0" prefWidth="200.0">
+      <CheckBox layoutX="354.0" layoutY="170.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="92.0" text="Completed" />
+      <TableView layoutX="34.0" layoutY="134.0" prefHeight="259.0" prefWidth="316.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Item" />
-          <TableColumn prefWidth="124.0" text="Description" />
+          <TableColumn prefWidth="93.0" text="Item" />
+          <TableColumn prefWidth="129.0" text="Description" />
+            <TableColumn prefWidth="93.0" text="Due Date" />
         </columns>
       </TableView>
-      <Separator layoutX="20.0" layoutY="131.0" prefHeight="0.0" prefWidth="379.0" />
+      <Separator layoutX="20.0" layoutY="130.0" prefHeight="4.0" prefWidth="573.0" />
+      <Button layoutX="505.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Save List" />
+      <ColorPicker layoutX="27.0" layoutY="25.0" prefHeight="25.0" prefWidth="86.0" />
+      <ProgressIndicator layoutX="21.0" layoutY="95.0" prefHeight="34.0" prefWidth="32.0" progress="0.0" />
+      <ScrollBar layoutX="20.0" layoutY="134.0" orientation="VERTICAL" prefHeight="259.0" prefWidth="14.0" />
+      <Button layoutX="443.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.0" text="Add" />
+      <Button layoutX="498.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Remove" />
+      <Label layoutX="443.0" layoutY="140.0" prefHeight="21.0" prefWidth="114.0" text="    Add/Remove">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="572.0" layoutY="140.0" prefHeight="21.0" prefWidth="55.0" text="   Edit">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="568.0" layoutY="168.0" prefHeight="25.0" prefWidth="62.0" />
    </children>
 </AnchorPane>
