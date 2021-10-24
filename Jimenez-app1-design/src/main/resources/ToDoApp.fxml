@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="baseline.Application"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.Application">
+   <children>
+      <Accordion layoutX="47.0" layoutY="65.0" />
+      <ButtonBar layoutY="14.0" prefHeight="50.0" prefWidth="399.0">
+        <buttons>
+          <Button mnemonicParsing="false" text="Remove" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="New" />
+            <Button mnemonicParsing="false" text="Edit Title" />
+            <Button mnemonicParsing="false" prefHeight="25.0" text="Save List" />
+        </buttons>
+      </ButtonBar>
+      <TextField layoutX="20.0" layoutY="64.0" prefHeight="25.0" prefWidth="379.0" promptText="List Title" />
+      <ChoiceBox accessibleText="Display" layoutX="220.0" layoutY="95.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="233.0" layoutY="140.0" prefHeight="17.0" prefWidth="67.0" text="Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="140.0" prefHeight="17.0" prefWidth="75.0" text="Complete">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="316.0" layoutY="174.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="92.0" text="Completed" />
+      <DatePicker layoutX="226.0" layoutY="172.0" prefHeight="17.0" prefWidth="67.0" />
+      <TableView layoutX="20.0" layoutY="140.0" prefHeight="259.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Item" />
+          <TableColumn prefWidth="124.0" text="Description" />
+        </columns>
+      </TableView>
+      <Separator layoutX="20.0" layoutY="131.0" prefHeight="0.0" prefWidth="379.0" />
+   </children>
 </AnchorPane>
